@@ -1,0 +1,9 @@
+Sun Mar 17 15:28:06 CST 2024
+/home/USER2022100821/work/C
+
+Command 'datee' not found, did you mean:
+
+  command 'date' from deb coreutils (8.30-3ubuntu2)
+
+Try: apt install <deb name>
+
