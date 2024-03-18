@@ -1,0 +1,4 @@
+原来是要这样操作
+先在本地创建一个文件后，用git add .或者git add 文件名，先将他加入临时缓冲区，然后
+git commit -m "要存储的说明" 将他加入本地的git仓库，再然后
+用git push origin master把他同步到GitHub仓库
