@@ -158,7 +158,7 @@ Try to put a blank line before...
 这是一个链接 [Markdown语法](https://markdown.com.cn)。  
 就是搞个中括号把文本括起来，后面加个小括号把连接地址放进去
 
-![这是图片](/assets/img/philly-magic-garden.jpg "Magic Gardens")
+>![这是图片](/Users/shuaiwang/Desktop/>> 精彩可用剪辑素材/DJI_0294.JPG" Magic Gardens"
 
 
 
