@@ -37,3 +37,4 @@
    这会将你的本地 master 分支推送到 GitHub 上的 origin 仓库。如果你的主分支不是 master，需要相应地替换为你的主分支名称。
 
 完成以上步骤后，你的本地文件夹就会与 GitHub 上的仓库同步了。
+学习git markdown
