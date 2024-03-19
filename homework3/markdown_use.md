@@ -136,6 +136,29 @@ And this is the second line.
 At the command prompt, type `nano`.	  
 可以看到加个 `直接在英文模式下按esc下面那个按键就可以打出`  
 
+# 代码块
+要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。
+
+    <html>
+      <head>
+      </head>
+    </html>  
+# Markdown 分隔线语法
+要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (---) 或下划线 (___) ，并且不能包含其他内容。
+*****
+比如上面我打了多个星号就又一个分割线  
+Try to put a blank line before...
+
+---
+
+...and after a horizontal rule.  
+# Markdown 链接语法
+链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。
+
+这是一个链接 [Markdown语法](https://markdown.com.cn)。  
+就是搞个中括号把文本括起来，后面加个小括号把连接地址放进去
+
+![这是图片](/assets/img/philly-magic-garden.jpg "Magic Gardens")
 
 
 
