@@ -2,3 +2,70 @@
 先在本地创建一个文件后，用git add .或者git add 文件名，先将他加入临时缓冲区，然后
 git commit -m "要存储的说明" 将他加入本地的git仓库，再然后
 用git push origin master把他同步到GitHub仓库
+#创建ssh密钥 ssh-keygen -t rsa -b 4096 -C "tustwangshuai@gmail.com"
+#查看ssh公钥cat ~/.ssh/id_rsa.pub
+然后将密钥添加到GitHub
+shuaiwang@ShuaideMacBook-Air 数据结构 % git log
+commit 259c5c08cc14f7b1ebd079c1d86195e09418aa43 (HEAD -> main)
+Author: Shuai Wang <shuaiwang@ShuaideMacBook-Air.local>
+Date:   Tue Mar 19 11:46:39 2024 +0800
+
+    数据结构的
+这个log显示了最新的提交，它有以下信息：
+
+- **Commit Hash (提交哈希)**: `259c5c08cc14f7b1ebd079c1d86195e09418aa43`，这是提交的唯一标识符。
+- **Branch (分支)**: `main`，这表示你当前位于`main`分支。
+- **Author (作者)**: `Shuai Wang <shuaiwang@ShuaideMacBook-Air.local>`，这是提交的作者和作者的电子邮件地址。
+- **Date (日期)**: `Tue Mar 19 11:46:39 2024 +0800`，这是提交的日期和时间。
+
+这个log并没有提供提交的具体更改内容，但根据提交信息，它似乎是关于“数据结构”的。
+
+要将本地更改同步到GitHub，你可以按照以下步骤操作：
+
+1. **添加远程仓库地址**：如果你还没有添加远程仓库地址，可以使用以下命令添加：
+
+   ```
+   git remote add origin <远程仓库地址>
+   ```
+
+2. **拉取远程仓库的更改**：在推送之前，先拉取远程仓库的更改以确保你的本地仓库是最新的：
+
+   ```
+   git pull origin main
+   ```
+
+3. **推送本地更改到GitHub**：一旦你的本地仓库是最新的，就可以将你的更改推送到GitHub：
+
+   ```
+   git push origin main
+   ```
+
+如果推送成功，你的本地更改就会被同步到GitHub上。
+
+
+要将本地的更改同步到GitHub仓库，可以按照以下步骤进行操作：
+
+1. **添加远程仓库地址**：首先，将GitHub仓库的地址添加为本地仓库的远程地址。在本地仓库目录下执行以下命令：
+
+    ```bash
+    git remote add origin https://github.com/wangtust/Data_structure.git
+    ```
+
+    这将远程仓库命名为`origin`，你也可以使用其他名称。
+
+2. **将本地更改提交到本地仓库**：确保你已经将所有要提交的更改添加到暂存区。可以使用以下命令将更改提交到本地仓库：
+
+    ```bash
+    git add .  # 将所有更改添加到暂存区
+    git commit -m "提交说明"  # 提交更改并附上说明
+    ```
+
+3. **推送更改到GitHub仓库**：使用以下命令将更改推送到GitHub仓库：
+
+    ```bash
+    git push -u origin main
+    ```
+
+    这会将本地的`main`分支推送到名为`origin`的远程仓库。
+
+如果你之前已经将GitHub仓库的地址添加为远程仓库，并且已经将更改推送到GitHub，可以跳过第一步，直接执行第二步和第三步。
