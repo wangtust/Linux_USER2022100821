@@ -1,13 +1,38 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
-      "request": "launch",
-      "args": [],
-      "cwd": "/Users/shuaiwang/Desktop/Linux_USER2022100821/homework2",
-      "program": "/Users/shuaiwang/Desktop/Linux_USER2022100821/homework2/build/Debug/outDebug"
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) 启动",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/shuaiwang/Desktop/Linux_USER2022100821/homework2/build/Debug/outDebug",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb"
+        },
+        {
+            "name": "C/C++ Runner: Debug Session",
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "/Users/shuaiwang/Desktop/Linux_USER2022100821/homework2",
+            "program": "/Users/shuaiwang/Desktop/Linux_USER2022100821/homework2/build/Debug/outDebug"
+        },
+        {
+            "name": "C/C++: clang 生成和调试活动文件",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: clang 生成活动文件"
+        }
+    ]
 }
