@@ -118,3 +118,28 @@ git pull origin main --allow-unrelated-histories
 要退出并保存提交消息，你可以按照编辑器的退出方法，通常是按下 `Esc` 键然后输入 `:wq`（表示保存并退出），然后按 `Enter` 键。
 ****
 >接下来，你可以运行 `git push origin main` 命令将合并后的更改推送到 GitHub 上的主分支。
+
+
+# 又遇到一个大问题
+用git push 时一直让我输入用户名和密码
+>user2022100821@ubuntu2204:~/Linux_USER2022100821$ git push
+Username for 'https://github.com': wangtust
+Password for 'https://wangtust@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/wangtust
+/Linux_USER2022100821.git/'
+*****
+试了很多方法
+最后用
+>git remote rm origin
+
+>git remote add origin git@github.com:wangtust/Linux_USER2022100821.git
+
+user2022100821@ubuntu2204:~/Linux_USER2022100821$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+user2022100821@ubuntu2204:~/Linux_USER2022100821$ git push --set-upstream origin master
