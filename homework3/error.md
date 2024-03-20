@@ -143,3 +143,23 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin master
 
 user2022100821@ubuntu2204:~/Linux_USER2022100821$ git push --set-upstream origin master
+# 关于安装homebrew ，运行brew却显示zsh: command not found: brew
+安装完homebrew后会有一条提示，如下图，应该是brew想在这里建立软链接但是发现没这个目录（macOS好像默认没有），这说明我们没有把brew添加到PATH里。
+执行
+> export PATH=$PATH:/opt/homebrew/bin
+>source ~/.zprofile
+接下来就好了
+在看一些自动化脚本好像也能实现，我试了运行不了，少了权限还是什么的
+# 关于homebrew使用
+输入命令: brew install wget
+
+其他命令
+brew list 列出已安装的软件
+
+brew update 更新brew
+
+brew home 用浏览器打开brew的官方网站
+
+brew info 显示软件信息
+
+brew deps 显示包依赖
