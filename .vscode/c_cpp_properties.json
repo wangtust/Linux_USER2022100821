@@ -1,25 +1,20 @@
 {
   "configurations": [
-      {
-          "name": "Mac",
-          "includePath": [
-              "${workspaceFolder}/**",
-              "/Library/Developer/CommandLineTools/usr/include/c++/v1",
-              "/usr/local/include",
-              "/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include",
-              "/Library/Developer/CommandLineTools/usr/include",
-              "/usr/include"
-          ],
-          "defines": [],
-          "macFrameworkPath": [
-              "/System/Library/Frameworks",
-              "/Library/Frameworks"
-          ],
-          "compilerPath": "/usr/bin/clang",
-          "cStandard": "c11",
-          "cppStandard": "c++17",
-          "intelliSenseMode": "${default}"
-      }
+    {
+      "name": "linux-gcc-arm64",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "defines": [],
+      "macFrameworkPath": [
+        "/System/Library/Frameworks",
+        "/Library/Frameworks"
+      ],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "${default}",
+      "cppStandard": "${default}",
+      "intelliSenseMode": "linux-gcc-arm64"
+    }
   ],
   "version": 4
 }
