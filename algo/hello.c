@@ -1,5 +1,7 @@
 #include<stdio.h>
 int main(){
-    printf("hellndcknflkkwaefkwkprvfopev");
+    int a; 
+    scanf("%d", &a);
+    printf("%d",a);
     return 0;
 }
