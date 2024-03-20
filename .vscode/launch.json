@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/shuaiwang/Desktop/Linux_USER2022100821/homework2",
+      "program": "/Users/shuaiwang/Desktop/Linux_USER2022100821/homework2/build/Debug/outDebug"
+    }
+  ]
+}
