@@ -1,0 +1,3 @@
+# 关于ssh每次连接虚拟机的linux都要输密码，好烦
+可以找到linux位于.ssh文件夹里的authorized_keys，用vim插入mac的ssh密钥就OK
+哈哈哈，试了下果然成功了
