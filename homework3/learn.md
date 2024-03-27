@@ -1178,3 +1178,93 @@ chown -R username:groupname directoryname
 6. `abc$`：`$` 是一个锚点，表示字符串的结束。所以这个正则表达式匹配以 "abc" 结束的字符串。
 
 以上只是正则表达式的一些基本用法，实际上正则表达式还有许多其他的特性和用法，可以用来编写非常复杂的匹配模式。
+## Bash 快捷键
+Bash（Bourne Again Shell）有许多快捷键可以提高命令行操作的效率。以下是一些常用的 Bash 快捷键：
+
+- `Ctrl + A`：移动光标到行首。
+- `Ctrl + E`：移动光标到行尾。
+- `Ctrl + C`：终止当前命令。
+- `Ctrl + D`：退出当前 Shell。
+- `Ctrl + K`：删除从光标位置到行尾的内容。
+- `Ctrl + U`：删除从光标位置到行首的内容。
+- `Ctrl + W`：删除光标前的一个单词。
+- `Ctrl + R`：反向搜索命令历史。
+- `Ctrl + L`：清屏。
+- `Ctrl + P`：显示上一个命令。
+- `Ctrl + N`：显示下一个命令。
+- `Ctrl + B`：光标向后移动一个字符。
+- `Ctrl + F`：光标向前移动一个字符。
+- `Ctrl + H`：删除光标前的一个字符，等同于 Backspace 键。
+- `Ctrl + J`：等同于 Enter 键。
+
+以上就是一些常用的 Bash 快捷键，它们可以帮助你更高效地在 Bash 中进行操作。
+
+记忆 Bash 快捷键的一个方法是理解每个快捷键背后的含义。以下是一些常用的 Bash 快捷键以及它们可能的英文单词对应：
+
+- `Ctrl + A`：**A**ll the way to the beginning of the line.
+- `Ctrl + E`：**E**nd of the line.
+- `Ctrl + C`：**C**ancel the current command.
+- `Ctrl + D`：**D**one with the shell (logout).
+- `Ctrl + K`：**K**ill the rest of the line (from cursor to end).
+- `Ctrl + U`：**U**ndo everything before the cursor (delete from cursor to beginning).
+- `Ctrl + W`：**W**ipe out the word before the cursor.
+- `Ctrl + R`：**R**everse search in command history.
+- `Ctrl + L`：**L**clear the screen.
+- `Ctrl + P`：**P**revious command in history.
+- `Ctrl + N`：**N**ext command in history.
+- `Ctrl + B`：**B**ackward one character.
+- `Ctrl + F`：**F**orward one character.
+- `Ctrl + H`：**H**ack off one character (same as backspace).
+- `Ctrl + J`：**J**ust like Enter key.
+
+这些英文单词可以帮助你记住每个快捷键的功能，从而更好地记住这些快捷键。
+
+在 Bash 中，"!" 是一个特殊的字符，它用于引用历史命令。以下是一些与 "!" 相关的快捷键和用法：
+
+- `!!`：执行上一条命令。例如，如果你刚刚运行了 `ls` 命令，那么输入 `!!` 就会再次运行 `ls` 命令。
+
+- `!$`：引用上一条命令的最后一个参数。例如，如果你刚刚运行了 `ls /etc` 命令，那么输入 `cd !$` 就会运行 `cd /etc` 命令。
+
+- `!-n`：引用倒数第 n 条命令。例如，`!-2` 会引用倒数第二条命令。
+
+- `!string`：执行最近的以 string 开头的命令。例如，`!ls` 会执行最近的以 `ls` 开头的命令。
+
+- `!?string?`：执行最近的包含 string 的命令。例如，`!?etc?` 会执行最近的包含 `etc` 的命令。
+
+以上就是一些与 "!" 相关的 Bash 快捷键和用法，它们可以帮助你更高效地在 Bash 中进行操作。
+
+## 字符
+### 管道| 、|&
+你正在使用 `ls -l /proc | more` 命令查看 `/proc` 目录的内容。这个命令的含义如下：
+
+- `ls -l /proc`：`ls` 是列出目录内容的命令，`-l` 选项表示以长格式显示信息，`/proc` 是你要查看的目录。`/proc` 目录包含了关于系统和正在运行的进程的信息。
+
+- `| more`：`|` 是管道符，它将前一个命令的输出作为后一个命令的输入。`more` 是一个分页程序，它可以一页一页地显示输入的内容。
+
+在你的输出中，每一行都代表一个进程。例如，`dr-xr-xr-x  9 root           root                         0 Mar 23 11:14 1` 这一行表示 PID 为 1 的进程。`dr-xr-xr-x` 是文件权限，`9` 是硬链接数，`root` 是文件所有者，`root` 是文件所属的组，`0` 是文件大小，`Mar 23 11:14` 是最后修改时间。
+
+`--More--` 表示还有更多的内容，你可以按 `space` 键查看下一页，按 `b` 键回到上一页，按 `q` 键退出 `more` 程序。
+### &、&&、||
+在 Linux 中，`&`、`&&` 和 `||` 是 shell 命令行中的特殊字符，它们在命令执行中起到控制作用：
+
+- `&`：在命令后面添加 `&` 可以使命令在后台运行。例如，`command &` 会在后台启动 `command`。
+
+- `&&`：这是一个逻辑 AND 操作符。它允许在前一个命令成功执行（返回值为0）后，才执行下一个命令。例如，`command1 && command2` 会先执行 `command1`，如果 `command1` 成功执行，那么才会执行 `command2`。
+
+- `||`：这是一个逻辑 OR 操作符。它允许在前一个命令失败（返回值非0）后，才执行下一个命令。例如，`command1 || command2` 会先执行 `command1`，如果 `command1` 执行失败，那么才会执行 `command2`。
+
+这些特殊字符可以帮助你更好地控制命令的执行流程。
+## 各种命令
+### shutdown
+`shutdown` 是 Linux 系统中用于关闭系统的命令。它可以让系统在一个指定的时间进行关机或者重启。以下是一些常用的 `shutdown` 命令选项：
+
+- `shutdown -h now`：立即关机。
+- `shutdown -h +m`：在 m 分钟后关机，其中 m 是一个数字。
+- `shutdown -h HH:MM`：在指定的时间（24小时制）关机。
+- `shutdown -r now`：立即重启。
+- `shutdown -r +m`：在 m 分钟后重启。
+- `shutdown -r HH:MM`：在指定的时间（24小时制）重启。
+- `shutdown -c`：取消已经安排的关机或重启。
+
+注意，使用 `shutdown` 命令通常需要 root 权限。在执行 `shutdown` 命令时，系统会向所有登录的用户发送通知，并阻止新的登录尝试。
+
