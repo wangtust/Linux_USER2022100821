@@ -1,7 +1,7 @@
 #include  <stdio.h>
 
 // 定义一些全局变量
-char str[]="hello, 1234";  // 字符串
+char str[]="严hello, 1234";  // 字符串
 int  value1 = 0x1234;  // 整数
 int  value2 = -3;  // 整数
 float value3 =-10.5;  // 浮点数
