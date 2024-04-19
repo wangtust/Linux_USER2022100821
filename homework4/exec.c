@@ -3,7 +3,6 @@
 #include <errno.h>
 #include <string.h>
 
-
 char * myenv[]={"KEY1=key1","TEST=Value",NULL};
 char * myargv[]={"uid","-l",NULL};
 
