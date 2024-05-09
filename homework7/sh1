@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# 遍历指定目录及其所有子目录中的所有文件
+for file in $(find $1 -type f); do
+  # 检查文件是否包含 "hello"
+  if grep -q "hello" $file; then
+    # 创建一个新的 .dat 文件，其中 "hello" 被替换为 "hi"
+    sed 's/hello/hi/g' $file > $file.dat
+  fi
+done

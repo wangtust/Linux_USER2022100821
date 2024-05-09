@@ -119,3 +119,23 @@ ls non_existent_directory > output.txt 2>&1
 这个命令会尝试列出一个不存在的目录 `non_existent_directory`，并将标准输出和标准错误都写入 `output.txt`。
 
 你可以在任何使用 bash 作为 shell 的终端中运行这些命令。如果你正在使用的 IDE 提供了终端访问，你可以在那里输入这些命令。如果你的 IDE 不提供终端访问，你可能需要打开一个单独的终端窗口来运行这些命令。
+
+
+# docker无法通过wsl启动
+在 WSL2 中，Docker 服务通常不是通过 `service` 命令启动的。相反，你需要在 Windows 中安装 Docker Desktop，并在其设置中启用 WSL2 集成。这将允许你在 WSL2 中直接访问 Docker 服务，无需手动启动它。
+
+以下是在 Windows 中安装和配置 Docker Desktop 的步骤：
+
+1. 下载并安装 Docker Desktop。你可以从 Docker 的官方网站下载它：https://www.docker.com/products/docker-desktop
+
+2. 安装完成后，打开 Docker Desktop。
+
+3. 在 Docker Desktop 的设置中，找到 "Resources" -> "WSL Integration"。
+
+4. 在 "WSL Integration" 页面中，确保 "Enable integration with my default WSL distro" 选项被选中。
+
+5. 在下面的列表中，找到你的 WSL2 发行版，并确保它旁边的复选框被选中。
+
+6. 点击 "Apply & Restart" 按钮来保存你的设置并重启 Docker Desktop。
+
+完成这些步骤后，你应该可以在你的 WSL2 发行版中直接使用 Docker 命令，如 `docker run hello-world`，无需手动启动 Docker 服务。

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>提交两个数字</title>
+</head>
+<body>
+    <h1>提交两个数字</h1>
+
+    <form onsubmit="return false;">
+        <input type="number" id="num1" placeholder="第一个数字">
+        <input type="number" id="num2" placeholder="第二个数字">
+        <input type="submit" value="提交" onclick="submitNumbers()">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function submitNumbers() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('result').innerHTML = xhr.responseText;
+                }
+            }
+
+            xhr.open('GET', `/back-end?num1=${num1}&num2=${num2}`, true);
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

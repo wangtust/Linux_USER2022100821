@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# 遍历指定目录及其所有子目录中的所有文件
+for file in $(find $1 -type f -size 0); do
+  # 删除文件大小为 0 的文件
+  rm $file
+done
