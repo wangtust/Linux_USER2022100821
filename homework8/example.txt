@@ -1,0 +1,8 @@
+This   is a    test file for sed.
+# It    contains several lines of sample text.  
+
+The word   "test" appears multiple times.   
+
+It contains several   lines of sample text.
+
+# comments

@@ -139,3 +139,7 @@ ls non_existent_directory > output.txt 2>&1
 6. 点击 "Apply & Restart" 按钮来保存你的设置并重启 Docker Desktop。
 
 完成这些步骤后，你应该可以在你的 WSL2 发行版中直接使用 Docker 命令，如 `docker run hello-world`，无需手动启动 Docker 服务。
+
+
+
+
