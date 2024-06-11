@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# 定义文件路径
+file="./tstdir/file1.txt"
+
+# 使用while循环读取文件的每一行
+while IFS= read -r line
+do
+  # 使用wc -w命令计算每一行的字数
+  word_count=$(echo $line | wc -w)
+
+  # 打印每一行的字数
+  echo "Line: '$line' has $word_count words"
+done < "$file"

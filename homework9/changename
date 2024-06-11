@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# 定义目录路径
+dir="./tstdir"
+
+# 使用for循环迭代目录下的所有文件
+for file in "$dir"/*
+do
+  # 获取文件的基本名和扩展名
+  base_name=$(basename "$file")
+  extension="${base_name##*.}"
+  name="${base_name%.*}"
+
+  # 将扩展名转换为大写
+  upper_extension=$(echo "$extension" | tr '[:lower:]' '[:upper:]')
+
+  # 如果文件有扩展名，并且扩展名不是大写的，那么重命名文件
+  if [ "$extension" != "$name" ] && [ "$extension" != "$upper_extension" ]; then
+    mv -- "$file" "$dir/$name.$upper_extension"
+  fi
+done

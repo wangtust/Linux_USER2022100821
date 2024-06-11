@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# 定义目录路径
+dir="./tstdir"
+
+# 使用for循环迭代目录下的所有文件
+for file in "$dir"/*
+do
+  # 使用chmod命令将文件的权限设置为所有者只读，其他人无权限
+  chmod 400 "$file"
+done

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# 定义目录路径
+dir="./tstdir"
+
+# 使用ls命令获取目录下的文件列表，然后使用wc -l命令计算文件数量
+file_count=$(ls -1 "$dir" | wc -l)
+
+# 打印文件数量
+echo "There are $file_count files in $dir"

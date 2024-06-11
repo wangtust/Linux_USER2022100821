@@ -1,0 +1,2 @@
+file3
+“line 2 HELLO ”

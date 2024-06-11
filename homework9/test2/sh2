@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# 初始化最高分和最低分
+max_score=-1
+min_score=101
+
+# 初始化最高分和最低分的学生姓名
+max_score_name=""
+min_score_name=""
+
+# 读取文件
+while IFS=',' read -r name score
+do
+    # 检查分数是否高于当前最高分
+    if (( score > max_score )); then
+        max_score=$score
+        max_score_name=$name
+    fi
+
+    # 检查分数是否低于当前最低分
+    if (( score < min_score )); then
+        min_score=$score
+        min_score_name=$name
+    fi
+done < file1.txt
+
+# 输出最高分和最低分
+echo "最高分: $max_score_name, $max_score"
+echo "最低分: $min_score_name, $min_score"

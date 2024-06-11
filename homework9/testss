@@ -1,0 +1,5 @@
+#!/bin/bash
+export B="1"
+echo $$
+echo $PPID
+echo $B

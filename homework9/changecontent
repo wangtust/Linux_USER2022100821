@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# 定义目录路径
+dir="./tstdir"
+
+# 使用for循环迭代目录下的所有文件
+for file in "$dir"/*
+do
+  # 使用sed命令将文件内容中的小写"hello"改为大写"HELLO"
+  sed -i 's/hello/HELLO/g' "$file"
+done

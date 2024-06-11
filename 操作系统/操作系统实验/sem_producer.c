@@ -11,9 +11,9 @@
 
 // 定义信号量联合体，用于信号量操作
 union semun {
-    int val;
-    struct semid_ds *buf;
-    unsigned short *array;
+    int val;  // 用于SETVAL操作
+    struct semid_ds *buf;  // 用于IPC_STAT和IPC_SET操作
+    unsigned short *array;  // 用于GETALL和SETALL操作
 };
 
 int main() {
@@ -47,14 +47,14 @@ int main() {
     }
 
     // 定义信号量操作结构体
-    struct sembuf sb = {0, -1, 0};
+    struct sembuf sb = {0, -1, 0};  // 第一个参数是信号量的索引，第二个参数是操作的数量，第三个参数是操作的标志
     char input[100];
     do {
         // 从标准输入读取数据
         printf("Enter some text: ");
         fgets(input, 100, stdin);
         // 执行P操作，尝试获取资源
-        semop(semid, &sb, 1);
+        semop(semid, &sb, 1);  // 第一个参数是信号量的标识符，第二个参数是指向信号量操作结构体的指针，第三个参数是操作的数量
         // 将数据复制到共享内存
         strcpy(data, input);
         // 执行V操作，释放资源
