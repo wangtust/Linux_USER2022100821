@@ -1,0 +1,15 @@
+if [ $# -ne 3 ]; then
+echo "格式错误"
+exit 1
+fi
+a=$1
+b=$2
+c=$3
+delta=$(echo "scale=2;$b*$b-4*$a*$c"|bc)
+if [ $(echo "$delta<0" |bc) -eq 1 ]; then
+ echo "无解"
+else 
+root1=$(echo "scale=2;(-$b+sqrt($delta))/(2*$a)"|bc)
+root2=$(echo "scale=2;(-$b-sqrt($delta))/(2*$a)"|bc)
+echo "$root1,$root2"
+fi
